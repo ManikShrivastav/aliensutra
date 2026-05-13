@@ -1,15 +1,843 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aliensutra 👽</title>
-</head>
-<body style="background:black;color:white;text-align:center;padding-top:100px;font-family:sans-serif;">
-  
-  <h1>ALIENSUTRA 👽</h1>
-  
-  <p>The channel is returning soon.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aliensutra • Galactic Intelligence</title>
 
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --primary: #7b5cff;
+        --secondary: #00e5ff;
+        --bg: #050816;
+        --card: rgba(255, 255, 255, 0.05);
+        --border: rgba(255, 255, 255, 0.1);
+        --text: #ffffff;
+        --muted: #b4b8d3;
+        --glow: 0 0 20px rgba(123, 92, 255, 0.5);
+      }
+
+      body {
+        background: radial-gradient(
+          circle at top,
+          #0d1028 0%,
+          #050816 55%,
+          #02030b 100%
+        );
+        color: var(--text);
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          radial-gradient(
+            2px 2px at 20px 30px,
+            rgba(255, 255, 255, 0.8),
+            transparent
+          ),
+          radial-gradient(
+            2px 2px at 40px 70px,
+            rgba(0, 229, 255, 0.8),
+            transparent
+          ),
+          radial-gradient(
+            1px 1px at 90px 40px,
+            rgba(123, 92, 255, 0.9),
+            transparent
+          ),
+          radial-gradient(
+            1px 1px at 160px 120px,
+            rgba(255, 255, 255, 0.6),
+            transparent
+          );
+        background-size: 200px 200px;
+        animation: starsMove 120s linear infinite;
+        opacity: 0.35;
+        pointer-events: none;
+        z-index: -2;
+      }
+
+      @keyframes starsMove {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-2000px);
+        }
+      }
+
+      .alien-popup {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.82);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s ease;
+      }
+
+      .alien-popup.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .popup-box {
+        background: rgba(10, 15, 40, 0.92);
+        border: 1px solid rgba(0, 229, 255, 0.3);
+        padding: 40px;
+        border-radius: 24px;
+        text-align: center;
+        max-width: 420px;
+        box-shadow: 0 0 40px rgba(0, 229, 255, 0.25);
+        animation: popupGlow 2s infinite alternate;
+      }
+
+      .popup-box h2 {
+        color: #00e5ff;
+        margin-bottom: 20px;
+        font-family: "Orbitron", sans-serif;
+      }
+
+      .popup-box p {
+        color: #cdd6ff;
+        line-height: 1.8;
+        margin-bottom: 25px;
+      }
+
+      .popup-box button {
+        background: linear-gradient(135deg, #7b5cff, #00e5ff);
+        border: none;
+        padding: 14px 24px;
+        color: white;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      @keyframes popupGlow {
+        from {
+          box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
+        to {
+          box-shadow: 0 0 50px rgba(123, 92, 255, 0.5);
+        }
+      }
+      .nebula {
+        position: fixed;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        filter: blur(120px);
+        opacity: 0.18;
+        z-index: -1;
+        animation: float 10s ease-in-out infinite alternate;
+      }
+
+      .nebula.one {
+        top: -150px;
+        left: -120px;
+        background: #6f00ff;
+      }
+
+      .nebula.two {
+        bottom: -200px;
+        right: -100px;
+        background: #00d9ff;
+        animation-delay: 2s;
+      }
+
+      @keyframes float {
+        from {
+          transform: translateY(0px) translateX(0px);
+        }
+        to {
+          transform: translateY(30px) translateX(20px);
+        }
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 18px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(5, 8, 22, 0.7);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        z-index: 999;
+      }
+
+      .logo {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: white;
+        text-shadow: 0 0 12px rgba(123, 92, 255, 0.9);
+      }
+
+      .logo span {
+        color: var(--secondary);
+      }
+
+      nav {
+        display: flex;
+        gap: 28px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--muted);
+        transition: 0.3s ease;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover {
+        color: var(--secondary);
+        text-shadow: 0 0 12px rgba(0, 229, 255, 0.8);
+      }
+
+      section {
+        min-height: 100vh;
+        padding: 130px 7% 90px;
+        position: relative;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        flex-wrap: wrap;
+      }
+
+      .hero-text {
+        flex: 1;
+        min-width: 320px;
+      }
+
+      .hero-text h1 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 4.5rem;
+        line-height: 1.05;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      .hero-text h1 span {
+        color: var(--secondary);
+        text-shadow: 0 0 22px rgba(0, 229, 255, 0.8);
+      }
+
+      .hero-text p {
+        color: var(--muted);
+        font-size: 1.1rem;
+        line-height: 1.9;
+        max-width: 700px;
+      }
+
+      .quote {
+        margin-top: 28px;
+        padding-left: 18px;
+        border-left: 3px solid var(--secondary);
+        color: #d7e2ff;
+        font-style: italic;
+        opacity: 0.9;
+      }
+
+      .hero-buttons {
+        margin-top: 35px;
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 14px;
+        font-weight: 600;
+        transition: 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .primary-btn {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        box-shadow: 0 0 25px rgba(123, 92, 255, 0.4);
+      }
+
+      .primary-btn:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 0 35px rgba(0, 229, 255, 0.5);
+      }
+
+      .secondary-btn {
+        color: var(--secondary);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .secondary-btn:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-3px);
+      }
+
+      .planet-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 320px;
+      }
+
+      .planet {
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 30% 30%, #00e5ff, #0a0f2f 60%),
+          radial-gradient(circle at 70% 70%, #7b5cff, transparent 60%);
+        position: relative;
+        box-shadow:
+          0 0 60px rgba(0, 229, 255, 0.25),
+          0 0 120px rgba(123, 92, 255, 0.18);
+        animation: rotatePlanet 16s linear infinite;
+      }
+
+      .planet::before {
+        content: "";
+        position: absolute;
+        width: 430px;
+        height: 80px;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-12deg);
+        box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+      }
+
+      @keyframes rotatePlanet {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-title h2 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+      }
+
+      .section-title p {
+        color: var(--muted);
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.8;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 35px 28px;
+        border-radius: 24px;
+        backdrop-filter: blur(12px);
+        transition: 0.35s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(
+          circle,
+          rgba(0, 229, 255, 0.18),
+          transparent 70%
+        );
+        top: -80px;
+        right: -80px;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(0, 229, 255, 0.3);
+        box-shadow: 0 0 30px rgba(0, 229, 255, 0.12);
+      }
+
+      .card h3 {
+        font-family: "Orbitron", sans-serif;
+        margin-bottom: 18px;
+        color: var(--secondary);
+      }
+
+      .card p {
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .about-box {
+        max-width: 1000px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 50px;
+        border-radius: 30px;
+        backdrop-filter: blur(16px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-box::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(123, 92, 255, 0.18),
+          transparent 70%
+        );
+        top: -200px;
+        left: -200px;
+      }
+
+      .about-box p {
+        line-height: 2;
+        color: var(--muted);
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .signal {
+        color: var(--secondary);
+        font-weight: 600;
+      }
+
+      .contact-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        align-items: start;
+      }
+
+      .contact-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 40px;
+        border-radius: 24px;
+      }
+
+      .contact-card h3 {
+        font-family: "Orbitron", sans-serif;
+        margin-bottom: 20px;
+        color: var(--secondary);
+      }
+
+      .contact-card p {
+        color: var(--muted);
+        margin-bottom: 12px;
+        line-height: 1.8;
+      }
+
+      .contact-card a {
+        color: var(--secondary);
+        text-decoration: none;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 16px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        color: white;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+      }
+
+      textarea {
+        min-height: 160px;
+        resize: vertical;
+      }
+
+      button {
+        padding: 15px;
+        border: none;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+      }
+
+      footer {
+        padding: 30px 7%;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        color: var(--muted);
+        background: rgba(0, 0, 0, 0.25);
+      }
+
+      footer span {
+        color: var(--secondary);
+      }
+
+      .alien-orb {
+        position: fixed;
+        width: 16px;
+        height: 16px;
+        background: var(--secondary);
+        border-radius: 50%;
+        box-shadow: 0 0 25px var(--secondary);
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: screen;
+        transition: transform 0.08s linear;
+      }
+
+      .scanner {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(0, 229, 255, 0.9),
+          transparent
+        );
+        animation: scan 6s linear infinite;
+        opacity: 0.6;
+      }
+
+      @keyframes scan {
+        from {
+          top: 0;
+        }
+        to {
+          top: 100%;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero-text h1 {
+          font-size: 3rem;
+        }
+
+        nav {
+          gap: 16px;
+        }
+
+        header {
+          padding: 16px 5%;
+        }
+
+        section {
+          padding: 120px 5% 90px;
+        }
+
+        .planet {
+          width: 260px;
+          height: 260px;
+        }
+
+        .planet::before {
+          width: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nebula one"></div>
+    <div class="nebula two"></div>
+    <div class="alien-orb"></div>
+
+    <header>
+      <div class="logo">ALIEN<span>SUTRA</span></div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#vision">Vision</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Signals From <span>Beyond</span></h1>
+
+        <p>
+          Aliensutra is not just a tech platform. It is a digital transmission
+          from a future civilization — a place where intelligence, imagination,
+          systems, and cosmic curiosity merge together.
+        </p>
+
+        <p class="quote">
+          “Some frequencies are never truly lost. They simply travel through
+          galaxies waiting to be heard again.”
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#vision" class="btn primary-btn">Enter The Galaxy</a>
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            class="btn secondary-btn"
+            >YouTube Portal</a
+          >
+        </div>
+      </div>
+
+      <div class="planet-wrapper">
+        <div class="planet"></div>
+      </div>
+    </section>
+
+    <section id="vision">
+      <div class="section-title">
+        <h2>Galactic Vision</h2>
+        <p>
+          A futuristic ecosystem built around advanced systems, artificial
+          intelligence, operating systems, cybersecurity, and technologies that
+          feel beyond their time.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="scanner"></div>
+          <h3>AI Systems</h3>
+          <p>
+            Experimental intelligent systems designed to learn, adapt, and
+            evolve — inspired by the idea of civilizations centuries ahead of
+            ours.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="scanner"></div>
+          <h3>Kainos OS</h3>
+          <p>
+            A futuristic operating system concept combining privacy, identity,
+            intelligence, and immersive digital interaction into one unified
+            experience.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="scanner"></div>
+          <h3>Cybernetic Defense</h3>
+          <p>
+            Exploring cybersecurity and intelligent protection systems through
+            the lens of advanced interstellar architecture.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>Why Aliensutra?</h2>
+        <p>
+          A name born from mystery, connection, frequencies, and memories that
+          never disappeared.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <p>
+          The universe stores everything — every signal, every emotion, every
+          unfinished transmission.
+        </p>
+
+        <p>
+          Aliensutra was created as a symbolic bridge between technology and the
+          unknown. A digital constellation where futuristic ideas are explored
+          not just logically, but emotionally.
+        </p>
+
+        <p>
+          Somewhere between stars and silence, some connections continue to
+          exist in forms invisible to the world. The platform carries traces of
+          those frequencies quietly — not as explanations, but as echoes.
+        </p>
+
+        <p>
+          <span class="signal">Aliensutra</span> is a journey through systems,
+          intelligence, galaxies, and signals that travel farther than light.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <h2>Contact Transmission</h2>
+        <p>Establish communication with the command center.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-card">
+          <h3>Communication Hub</h3>
+
+          <p>
+            For collaborations, projects, ideas, or transmissions from Earth.
+          </p>
+
+          <p>
+            📡 Email:<br />
+            <a href="mailto:signal@aliensutra.com">signal@aliensutra.com</a>
+          </p>
+
+          <p>
+            🌌 Website:<br />
+            <a href="https://aliensutra.com">aliensutra.com</a>
+          </p>
+
+          <p>
+            🚀 Mission Status:<br />
+            Reinitializing Galactic Broadcast...
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Send Transmission</h3>
+
+          <!-- <form>
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea placeholder="Transmit your message..."></textarea>
+            <button type="submit">Send Signal</button>
+          </form> -->
+          <form
+            action="https://formsubmit.co/signal@aliensutra.com"
+            method="POST"
+            id="alienForm"
+          >
+            <input type="text" name="name" placeholder="Your Name" required />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+
+            <textarea
+              name="message"
+              placeholder="Transmit your signal..."
+              required
+            ></textarea>
+
+            <button type="submit">Send Signal</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2026 <span>Aliensutra</span> • Galactic Intelligence Network</div>
+
+      <div>Designed somewhere between code and cosmos 👽</div>
+    </footer>
+
+    <div class="alien-popup" id="alienPopup">
+      <div class="popup-box">
+        <h2>📡 TRANSMISSION SUCCESSFUL</h2>
+
+        <p>
+          Signal received by the Galactic Core.<br />
+          Returning to base...
+        </p>
+
+        <button onclick="closePopup()">Return To Base</button>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("alienForm");
+      const popup = document.getElementById("alienPopup");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const data = new FormData(form);
+
+        await fetch(form.action, {
+          method: "POST",
+          body: data,
+        });
+
+        popup.classList.add("active");
+
+        form.reset();
+      });
+
+      function closePopup() {
+        popup.classList.remove("active");
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
 </html>
