@@ -817,6 +817,15 @@
     </div>
 
     <script>
+       const orb = document.querySelector('.alien-orb');
+
+      document.addEventListener('mousemove', (e) => {
+        orb.style.left = e.clientX + 'px';
+        orb.style.top = e.clientY + 'px';
+      });
+
+    
+
       const form = document.getElementById("alienForm");
       const popup = document.getElementById("alienPopup");
 
