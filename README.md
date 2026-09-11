@@ -1,81 +1,76 @@
-# 👽 Aliensutra — Static Galactic Website
+# 👽 ALIENSUTRA
 
-A futuristic static website for **Aliensutra**, built with plain HTML, CSS and JavaScript.
+> **Where Intelligence Meets The Cosmos**
 
-## Features
+Aliensutra is a futuristic digital ecosystem exploring the intersection of artificial intelligence, advanced systems, cybersecurity, operating systems, and cosmic imagination.
 
-- 🌌 Three.js animated galaxy background
-- 👽 Alien-inspired visual identity
-- 🛰️ Holographic / sci-fi UI
-- 📱 Responsive mobile layout
-- 🍔 Mobile hamburger navigation
-- 🖱️ Mouse-based galaxy movement
-- 📱 Touch-based galaxy movement
-- ✨ Scroll reveal animations
-- 🪐 Interactive project constellation
-- 📡 Transmission / YouTube section
-- 📬 Contact terminal
-- 🚫 No npm required
+Built with a galactic aesthetic and visionary approach, the project represents more than technology — it represents signals, ideas, and frequencies that travel beyond time.
 
-## Files
+---
 
-```text
-index.html
-style.css
-script.js
-README.md
+## 🌌 Vision
+
+Aliensutra exists as a platform for:
+
+- 🧠 AI Systems & Experiments
+- 💻 Futuristic Operating Systems
+- 🛡️ Cybersecurity & Intelligent Defense
+- 🚀 Advanced Tech Concepts
+- 🌠 Galactic-inspired Design & Storytelling
+
+The goal is to create experiences and systems that feel beyond their era.
+
+---
+
+## ⚡ Features
+
+- 👽 Alien-themed futuristic UI
+- 🌌 Galactic visual design
+- 📡 Real-time transmission/contact system
+- ✨ Responsive holographic interface
+- 🚀 Cloudflare-powered deployment
+- 🔮 Interactive cosmic animations
+
+---
+
+## 🛰️ Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- Cloudflare Pages
+- Cloudflare Email Routing
+- GitHub
+
+---
+
+## 🌠 Philosophy
+
+Some signals never truly disappear.
+
+Aliensutra is inspired by the idea that memories, ideas, and connections continue traveling through the universe long after they seem silent.
+
+---
+
+## 📡 Live Transmission
+
+🌐 https://aliensutra.com
+
+---
+
+## 👨‍🚀 Founder
+
+Created and engineered by **Manik Shrivastav**.
+
+---
+
+## 🚀 Status
+
+```txt
+MISSION STATUS:
+REINITIALIZING GALACTIC BROADCAST...
 ```
 
-## Run locally
+---
 
-Because the page uses external Three.js assets, run it through a local HTTP server rather than opening `index.html` with `file:///`.
-
-### VS Code
-
-Install the Live Server extension, then right-click `index.html` → **Open with Live Server**.
-
-Or use Python:
-
-```bash
-python -m http.server 5500
-```
-
-Then open:
-
-```text
-http://localhost:5500
-```
-
-## Deploy
-
-This is a static site and can be deployed directly to Cloudflare Pages.
-
-Upload/push these files to the connected Git repository and set the build configuration to:
-
-- Build command: leave empty
-- Build output directory: `/`
-- Root directory: `/`
-
-If deploying as a Worker/static-assets project, the same files can also be served as static assets.
-
-## Contact form
-
-The current form is intentionally static. It creates a `mailto:` transmission to:
-
-```text
-hello@aliensutra.com
-```
-
-For true server-side form delivery without requiring the visitor's mail app, connect the form to a Cloudflare Worker / Pages Function or a form service later.
-
-## Customize
-
-Update:
-
-- Social links in `index.html`
-- Project descriptions/URLs in `script.js`
-- `hello@aliensutra.com` if your official address changes
-- Colors and typography in `style.css`
-- The 3D galaxy parameters near the bottom of `script.js`
-
-Build beyond the ordinary. 👽
+© 2026 Aliensutra • Galactic Intelligence Network
