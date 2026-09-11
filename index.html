@@ -1,247 +1,263 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aliensutra • Galactic Intelligence</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#03050b">
+  <meta name="description" content="Aliensutra — an experimental digital universe exploring AI, software, systems and ideas beyond the ordinary.">
+  <title>Aliensutra — Enter the Signal</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2303050b'/%3E%3Cellipse cx='35' cy='45' rx='13' ry='20' fill='%2300e5ff'/%3E%3Cellipse cx='65' cy='45' rx='13' ry='20' fill='%2300e5ff'/%3E%3Cellipse cx='50' cy='62' rx='5' ry='3' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader" class="loader">
+    <div class="loader-orbit"></div>
+    <div class="loader-core">👽</div>
+    <div class="loader-text">
+      <span>INCOMING TRANSMISSION</span>
+      <strong>ALIENSUTRA</strong>
+      <small>CALIBRATING THE UNIVERSE...</small>
+    </div>
+  </div>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="nebula one"></div>
-    <div class="nebula two"></div>
-    <div class="alien-orb"></div>
-    <div class="parallax-orb one"></div>
-    <div class="parallax-orb two"></div>
+  <canvas id="space"></canvas>
+  <div class="noise"></div>
+  <div class="vignette"></div>
 
-    <header>
-      <div class="logo">
-        <img src="logo.png" alt="Aliensutra Logo" />
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="Aliensutra home">
+      <span class="brand-mark">👽</span>
+      <span>ALIENSUTRA</span>
+    </a>
 
-        <span>ALIEN</span>SUTRA
-      </div>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <!-- <div class="logo">ALIEN<span>SUTRA</span></div> -->
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#vision">Vision</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <nav class="nav-links">
+      <a href="#about">Signal</a>
+      <a href="#projects">Constellation</a>
+      <a href="#transmissions">Transmissions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section class="hero" id="home">
-      <div class="hero-text">
-        <h1>Signals From <span>Beyond</span></h1>
-
-        <p>
-          Aliensutra is not just a tech platform. It is a digital transmission
-          from a future civilization — a place where intelligence, imagination,
-          systems, and cosmic curiosity merge together.
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="pulse"></span> SIGNAL DETECTED · ALIENSUTRA NETWORK</p>
+        <h1>WHERE<br><span>INTELLIGENCE</span><br>MEETS THE COSMOS.</h1>
+        <p class="hero-lead">
+          A digital outpost for AI, software, systems, experiments and ideas
+          that refuse to stay inside ordinary boundaries.
         </p>
-
-        <p class="quote">
-          “Some frequencies are never truly lost. They simply travel through
-          galaxies waiting to be heard again.”
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#vision" class="btn primary-btn">Enter The Galaxy</a>
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            class="btn secondary-btn"
-            >YouTube Portal</a
-          >
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#about">ENTER THE SIGNAL <span>↗</span></a>
+          <a class="btn btn-ghost" href="#projects">EXPLORE THE CONSTELLATION</a>
+        </div>
+        <div class="signal-readout">
+          <span>ORIGIN <b>UNKNOWN</b></span>
+          <span>FREQUENCY <b>∞</b></span>
+          <span>STATUS <b class="online">ONLINE</b></span>
         </div>
       </div>
 
-      <div class="planet-wrapper">
-        <div class="planet"></div>
+      <div class="hero-orb reveal">
+        <div class="orb-ring ring-a"></div>
+        <div class="orb-ring ring-b"></div>
+        <div class="orb-ring ring-c"></div>
+        <div class="orb-label label-top">ALIEN SIGNAL</div>
+        <div class="orb-label label-bottom">DO NOT ADJUST</div>
+        <div class="alien-face">
+          <div class="eye eye-left"></div>
+          <div class="eye eye-right"></div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+
+      <div class="scroll-cue">SCROLL TO DESCEND <span>↓</span></div>
+    </section>
+
+    <section id="about" class="section content-section">
+      <div class="section-heading reveal">
+        <p class="section-index">01 / SIGNAL</p>
+        <h2>What is <span>Aliensutra?</span></h2>
+        <p>
+          Not another ordinary corner of the internet. Aliensutra is a creative
+          technology universe — a place where curiosity becomes systems,
+          experiments become prototypes, and technology gets a little strange.
+        </p>
+      </div>
+
+      <div class="signal-grid">
+        <article class="holo-card reveal">
+          <div class="card-number">A-01</div>
+          <div class="card-icon">◉</div>
+          <h3>Artificial Intelligence</h3>
+          <p>Exploring intelligent systems, LLMs, automation and the changing boundary between humans and machines.</p>
+          <span class="card-status">SYSTEM / ACTIVE</span>
+        </article>
+
+        <article class="holo-card reveal">
+          <div class="card-number">A-02</div>
+          <div class="card-icon">⌬</div>
+          <h3>Systems & Software</h3>
+          <p>Low-level thinking, software engineering, Linux, developer tools and the machinery beneath the interface.</p>
+          <span class="card-status">SYSTEM / ACTIVE</span>
+        </article>
+
+        <article class="holo-card reveal">
+          <div class="card-number">A-03</div>
+          <div class="card-icon">✦</div>
+          <h3>Experiments</h3>
+          <p>Ideas don't need permission to become prototypes. This is the laboratory for unusual technical concepts.</p>
+          <span class="card-status">LAB / EXPERIMENTAL</span>
+        </article>
+      </div>
+
+      <div class="story-strip reveal">
+        <span>THE ALIENSUTRA PRINCIPLE</span>
+        <strong>BUILD WHAT YOU CANNOT FIND.</strong>
       </div>
     </section>
 
-    <section id="vision">
-      <div class="section-title">
-        <h2>Galactic Vision</h2>
-        <p>
-          A futuristic ecosystem built around advanced systems, artificial
-          intelligence, operating systems, cybersecurity, and technologies that
-          feel beyond their time.
-        </p>
+    <section id="projects" class="section content-section constellation-section">
+      <div class="section-heading reveal">
+        <p class="section-index">02 / CONSTELLATION</p>
+        <h2>Projects from the <span>outer rim.</span></h2>
+        <p>Every project is a signal. Select a node and explore its orbit.</p>
       </div>
 
-      <div class="cards">
-        <div class="card">
-          <div class="scanner"></div>
-          <h3>AI Systems</h3>
-          <p>
-            Experimental intelligent systems designed to learn, adapt, and
-            evolve — inspired by the idea of civilizations centuries ahead of
-            ours.
-          </p>
-        </div>
+      <div class="constellation reveal" id="constellation">
+        <div class="constellation-lines"></div>
+        <button class="star-node node-1" data-project="KainOS"><span></span><b>KainOS</b></button>
+        <button class="star-node node-2" data-project="AlienSutra"><span></span><b>AlienSutra</b></button>
+        <button class="star-node node-3" data-project="EOE"><span></span><b>EOE</b></button>
+        <button class="star-node node-4" data-project="MuktiNote"><span></span><b>MuktiNote</b></button>
+        <button class="star-node node-5" data-project="MousePad"><span></span><b>MousePad</b></button>
+        <div class="constellation-core">AS</div>
+      </div>
 
-        <div class="card">
-          <div class="scanner"></div>
-          <h3>Kainos OS</h3>
-          <p>
-            A futuristic operating system concept combining privacy, identity,
-            intelligence, and immersive digital interaction into one unified
-            experience.
-          </p>
+      <div class="project-panel" id="projectPanel" aria-live="polite">
+        <div>
+          <small>SELECTED SIGNAL</small>
+          <h3 id="projectName">ALIENSUTRA</h3>
+          <p id="projectDescription">Choose a constellation node to receive its transmission.</p>
         </div>
-
-        <div class="card">
-          <div class="scanner"></div>
-          <h3>Cybernetic Defense</h3>
-          <p>
-            Exploring cybersecurity and intelligent protection systems through
-            the lens of advanced interstellar architecture.
-          </p>
-        </div>
+        <a id="projectLink" href="https://github.com/ManikShrivastav" target="_blank" rel="noopener">OPEN GITHUB ↗</a>
       </div>
     </section>
 
-    <section id="about">
-      <div class="section-title">
-        <h2>Why Aliensutra?</h2>
-        <p>
-          A name born from mystery, connection, frequencies, and memories that
-          never disappeared.
-        </p>
+    <section id="transmissions" class="section content-section">
+      <div class="section-heading reveal">
+        <p class="section-index">03 / TRANSMISSIONS</p>
+        <h2>Broadcasts from <span>the lab.</span></h2>
+        <p>Videos, experiments, technical stories and future transmissions.</p>
       </div>
 
-      <div class="about-box">
-        <p>
-          The universe stores everything — every signal, every emotion, every
-          unfinished transmission.
-        </p>
+      <div class="transmission-grid">
+        <article class="transmission-card reveal">
+          <div class="transmission-screen">
+            <span class="scanline"></span>
+            <strong>TRANSMISSION 001</strong>
+            <small>COMING SOON</small>
+            <div class="play-orbit">▶</div>
+          </div>
+          <div class="transmission-meta"><span>YOUTUBE</span><span>CLASSIFIED</span></div>
+          <h3>The first transmission</h3>
+          <p>The laboratory doors open soon.</p>
+        </article>
 
-        <p>
-          Aliensutra was created as a symbolic bridge between technology and the
-          unknown. A digital constellation where futuristic ideas are explored
-          not just logically, but emotionally.
-        </p>
+        <article class="transmission-card reveal">
+          <div class="transmission-screen screen-two">
+            <span class="scanline"></span>
+            <strong>SIGNAL / AI</strong>
+            <small>DECODED SOON</small>
+            <div class="play-orbit">✦</div>
+          </div>
+          <div class="transmission-meta"><span>AI</span><span>RESEARCH</span></div>
+          <h3>Machines that think differently</h3>
+          <p>Notes from the edge of intelligent systems.</p>
+        </article>
 
-        <p>
-          Somewhere between stars and silence, some connections continue to
-          exist in forms invisible to the world. The platform carries traces of
-          those frequencies quietly — not as explanations, but as echoes.
-        </p>
-
-        <p>
-          <span class="signal">Aliensutra</span> is a journey through systems,
-          intelligence, galaxies, and signals that travel farther than light.
-        </p>
+        <article class="transmission-card reveal">
+          <div class="transmission-screen screen-three">
+            <span class="scanline"></span>
+            <strong>DEEP SPACE / SYS</strong>
+            <small>ARCHIVE</small>
+            <div class="play-orbit">⌬</div>
+          </div>
+          <div class="transmission-meta"><span>SYSTEMS</span><span>BUILD</span></div>
+          <h3>Under the interface</h3>
+          <p>Low-level ideas, tools and experiments.</p>
+        </article>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="section-title">
-        <h2>Contact Transmission</h2>
-        <p>Establish communication with the command center.</p>
-      </div>
-
-      <div class="contact-wrapper">
-        <div class="contact-card">
-          <h3>Communication Hub</h3>
-
-          <p>
-            For collaborations, projects, ideas, or transmissions from Earth.
-          </p>
-
-          <p>
-            📡 Email:<br />
-            <a href="mailto:signal@aliensutra.com">signal@aliensutra.com</a>
-          </p>
-
-          <p>
-            🌌 Website:<br />
-            <a href="https://aliensutra.com">aliensutra.com</a>
-          </p>
-
-          <p>
-            🚀 Mission Status:<br />
-            Reinitializing Galactic Broadcast...
-          </p>
+    <section id="contact" class="section content-section contact-section">
+      <div class="contact-terminal reveal">
+        <div class="terminal-head">
+          <span><i></i><i></i><i></i></span>
+          <small>ALIENSUTRA / COMMUNICATION TERMINAL</small>
+          <span>SECURE</span>
         </div>
 
-        <div class="contact-card">
-          <h3>Send Transmission</h3>
+        <div class="contact-inner">
+          <div class="contact-copy">
+            <p class="section-index">04 / CONTACT</p>
+            <h2>Establish a <span>transmission.</span></h2>
+            <p>
+              Have an idea, collaboration, project or signal worth sending?
+              Open a channel.
+            </p>
+            <a class="email-link" href="mailto:hello@aliensutra.com">hello@aliensutra.com ↗</a>
+          </div>
 
-          <!-- <form>
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Your Email" />
-            <textarea placeholder="Transmit your message..."></textarea>
-            <button type="submit">Send Signal</button>
-          </form> -->
-          <form
-            action="https://formsubmit.co/signal@aliensutra.com"
-            method="POST"
-            id="alienForm"
-          >
-            <input type="text" name="name" placeholder="Your Name" required />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-
-            <textarea
-              name="message"
-              placeholder="Transmit your signal..."
-              required
-            ></textarea>
-
-            <input type="hidden" name="_captcha" value="false" />
-
-            <input
-              type="hidden"
-              name="_subject"
-              value="👽 New Galactic Transmission"
-            />
-
-            <input type="hidden" name="_template" value="table" />
-            <button type="submit">Send Signal</button>
+          <form id="contactForm" class="contact-form">
+            <label>
+              <span>IDENTIFIER</span>
+              <input name="name" type="text" placeholder="Your name" required>
+            </label>
+            <label>
+              <span>RETURN FREQUENCY</span>
+              <input name="email" type="email" placeholder="you@example.com" required>
+            </label>
+            <label>
+              <span>TRANSMISSION</span>
+              <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">TRANSMIT SIGNAL <span>↗</span></button>
+            <p class="form-note">The form opens your email client. For server-side delivery, connect it to a form endpoint later.</p>
           </form>
         </div>
       </div>
     </section>
+  </main>
 
-    <footer>
-      <div>© 2026 <span>Aliensutra</span> • Galactic Intelligence Network</div>
-
-      <div>Designed somewhere between code and cosmos 👽</div>
-    </footer>
-
-    <div class="alien-popup" id="alienPopup">
-      <div class="popup-box">
-        <h2>📡 TRANSMISSION SUCCESSFUL</h2>
-
-        <p>
-          Signal received by the Galactic Core.<br />
-          Returning to base...
-        </p>
-
-        <button onclick="closePopup()">Return To Base</button>
-      </div>
+  <div class="success-modal" id="successModal" aria-hidden="true">
+    <div class="success-box">
+      <div class="success-alien">👽</div>
+      <p class="eyebrow">TRANSMISSION RECEIVED</p>
+      <h2>Signal successfully launched.</h2>
+      <p>Your message has been prepared for transmission back to the Aliensutra base.</p>
+      <button class="btn btn-primary" id="closeModal">RETURN TO BASE</button>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <footer class="footer">
+    <div class="footer-brand"><span>👽</span> ALIENSUTRA</div>
+    <p>Build beyond the ordinary.</p>
+    <div class="footer-links">
+      <a href="https://github.com/ManikShrivastav" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+      <a href="mailto:hello@aliensutra.com">Email</a>
+    </div>
+    <small>© <span id="year"></span> ALIENSUTRA · ALL SIGNALS RESERVED</small>
+  </footer>
+
+  <!-- Classic Three.js script: no npm and no ES-module import required. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
